@@ -2,10 +2,9 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-home-layout',
-  standalone: true,
-  imports: [RouterLink, RouterOutlet],
-  template: `
+    selector: 'app-home-layout',
+    imports: [RouterLink, RouterOutlet],
+    template: `
     <header>
       <h1>HOME - HEADER</h1>
     </header>
@@ -20,7 +19,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
       <h3>HOME -- FOOTER</h3>
     </footer>
   `,
-  styleUrl: './home-layout.component.scss'
+    styleUrl: './home-layout.component.scss'
 })
 export class HomeLayoutComponent {
 
