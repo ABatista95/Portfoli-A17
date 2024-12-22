@@ -1,16 +1,23 @@
 import { Routes } from "@angular/router";
-import { HomeLayoutComponent } from "./home/home-layout.component";
+import { PublicLayoutComponent } from "./public-layout.component";
+import { HomeComponent } from "./home/home.component";
 
 export const ROUTES_PUBLIC: Routes = [
     {
         path: '',
-        title: 'Home',
-        component: HomeLayoutComponent,
+        component: PublicLayoutComponent,
         children: [
+            {
+                path: '',
+                title: 'Home',
+                component: HomeComponent
+            },
+            {
+                path: 'aboutme',
+                title: 'About Me',
+                loadComponent: () => import('./about-me/about-me.component').then(c => c.AboutMeComponent)
+            }
         ],
     },
-    {
-        path: 'aboutme',
-        title: 'About Me',
-    }
+    
 ];

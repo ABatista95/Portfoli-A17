@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-    selector: 'app-home-layout',
-    imports: [RouterLink, RouterOutlet],
-    template: `
+  selector: 'app-public-layout',
+  imports: [RouterOutlet],
+  template: `
     <div class="body">
       <header>
         <h1>HOME - HEADER</h1>
@@ -25,8 +25,8 @@ import { RouterLink, RouterOutlet } from '@angular/router';
       </footer>
     </div>
   `,
-    styleUrl: './home-layout.component.scss'
+  styleUrl: './public-layout.component.scss'
 })
-export class HomeLayoutComponent {
+export class PublicLayoutComponent {
 
 }
